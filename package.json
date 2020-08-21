@@ -12,6 +12,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:firefox": "web-ext-react run | xargs -L1 web-ext run -u http://www.example.org/ -s",
+    "start:chrome": "web-ext-react run | xargs -L1 web-ext run -u http://www.example.org/ -t chromium -s",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -30,5 +32,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "web-ext": "^5.0.0",
+    "web-ext-react": "^1.0.1"
   }
 }
